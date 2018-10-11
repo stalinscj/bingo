@@ -1,0 +1,38 @@
+1.- Los programas deben ser ejecutados en el siguiente orden:
+
+   - primero ser ejecuta en cantador, luego el juez y por último los jugadores.
+
+2.- El modo de juego se recibe como parámetro por consola, siendo el 0 el modo manual y el 1
+    el modo automático(si no se reciben parámetros se asume que es manual), ejemplo:
+
+   - usuario@Debian: ~ $ ./postor 1
+
+
+3.- En caso de error al ejecutar el cantador, ejecute desde consola el programa destructor.
+
+
+4.- El programa está desarrollado usando la librería grafica GTK 2.0, por lo tanto para
+    compilar se debe hacer de la siguiente manera:
+
+	//Ej postor:
+  
+   - usuario@Debian: ~ $ gcc postor.c bingo.c semaforos.c senales.c memoria.c mensajes .c 
+                         -o postor `pkg-config --cflags --libs gtk+-2.0`
+
+	//Ej cantador:
+  
+   - usuario@Debian: ~ $ gcc cantador.c bingo.c semaforos.c senales.c memoria.c mensajes .c 
+                         -o cantador `pkg-config --cflags --libs gtk+-2.0`
+	
+	//Ej juez:
+  
+   - usuario@Debian: ~ $ gcc juez.c bingo.c semaforos.c senales.c memoria.c mensajes .c 
+                         -o juez `pkg-config --cflags --libs gtk+-2.0`
+
+
+5.- Para salir de la ejecución de un programa pulse ctrl+c en la consola mientras este se está ejecutando;
+   
+
+6.- Todos los archivos deben estar en la misma carpeta y deben ser ejecutados desde la consola.
+
+   
